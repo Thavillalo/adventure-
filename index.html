@@ -1,21 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>História Interativa</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>O Sonho</title>
 </head>
 <body>
-    <div id="historia">
-        <h1>Aventura na Floresta</h1>
-        <p id="texto-historia">Você está no meio de uma floresta densa. Há dois caminhos à sua frente: um à esquerda, outro à direita.</p>
-        <div id="opcoes">
-            <button onclick="escolherEsquerda()">Ir para a esquerda</button>
-            <button onclick="escolherDireita()">Ir para a direita</button>
+    <main>
+        <div class="passo ativo" id="passo-0">
+            <img src="img/cenario-passo0.png" alt="">
+            <p>Clara, de 12 anos, ama dançar e sonha em se apresentar nos maiores palcos do mundo. Quando surge uma audição para um famoso espetáculo, ela vê a chance de sua vida. Mas no mesmo dia, sua melhor amiga Ana precisa de ajuda na feira beneficente da escola. Clara está dividida: seguir seu sonho ou apoiar sua amiga.</p>
+            <button class="btn-proximo" data-proximo="1">Clara se concentra e decide fazer a apresentação.</button>
+            <button class="btn-proximo" data-proximo="2">Clara ajuda Ana na feira.</button>
         </div>
-    </div>
+        <div class="passo" id="passo-1">
+            <p>Clara é escolhida para o papel principal no espetáculo! No entanto, Ana fica magoada por sua ausência na feira. Clara precisa decidir se tenta se desculpar e reparar a amizade.</p>
+            <button class="btn-proximo" data-proximo="3">Clara se desculpa com Ana e propõe ajudá-la em outro evento.</button>
+            <button class="btn-proximo" data-proximo="4">Clara decide focar na preparação para o espetáculo, aceitando as consequências de sua escolha.</button>
+        </div>
+        <div class="passo" id="passo-2">
+            <p>Após o espetáculo, Clara sente uma grande pressão em manter sua amizade com Ana. Ela se vê dividida entre tentar recuperar a amizade ou se dedicar ainda mais à sua carreira de dançarina.</p>
+            <button class="btn-proximo" data-proximo="5">Clara tenta conversar com Ana e reconquistar sua amizade.</button>
+            <button class="btn-proximo" data-proximo="6">Clara se dedica ainda mais ao seu treinamento, decidindo que seu futuro é o mais importante.</button>
+        </div>
 
+        <div class="passo" id="passo-3">
+            <p>Clara decide se desculpar com Ana e propõe ajudá-la em outro evento, mostrando que se importa com a amizade. Ana aceita e elas começam a planejar juntas um novo evento na escola.</p>
+            <button class="btn-proximo" data-proximo="7">Organizar o evento com Ana e se preparar para o próximo espetáculo.</button>
+        </div>
+
+        <div class="passo" id="passo-4">
+            <p>Clara decide seguir focada em sua carreira, aceitando que as escolhas têm suas consequências. Ana fica magoada, mas Clara sente que precisa se dedicar ao seu sonho.</p>
+            <button class="btn-proximo" data-proximo="8">Clara sente a solidão, mas permanece firme no seu caminho.</button>
+        </div>
+
+        <div class="passo" id="passo-5">
+            <p>Clara tenta se desculpar com Ana e as duas começam a planejar um evento beneficente para a escola. Juntas, elas fazem a diferença e Clara se sente feliz por ter reconciliado com sua amiga, mas ainda focada no seu futuro como dançarina.</p>
+            <button class="btn-proximo" data-proximo="9">Participar do evento com Ana e continuar os ensaios para o espetáculo.</button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <p>Clara decide seguir seu sonho, aceitando que sua amizade com Ana pode ser afetada. Ela se dedica cada vez mais aos ensaios e se prepara para uma grande performance no palco.</p>
+            <button class="btn-proximo" data-proximo="10">Clara se apresenta no palco e começa a colher os frutos de sua dedicação.</button>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <p>Clara e Ana conseguem realizar o evento beneficente com sucesso, e o reconhecimento das duas cresce. Clara se sente mais conectada com Ana, mas também sente que está mais perto de alcançar seu sonho.</p>
+            <button class="btn-proximo" data-proximo="10">Clara e Ana comemoram o sucesso e Clara segue para o grande espetáculo.</button>
+        </div>
+
+        <div class="passo" id="passo-8">
+            <p>Clara continua sua jornada sozinha, mas sente um vazio ao não estar mais ao lado de Ana. Ela começa a questionar se fez a escolha certa. A solidão é um preço alto a pagar pelo sucesso.</p>
+            <button class="btn-proximo" data-proximo="9">Clara se apresenta no palco, mas reflete sobre suas escolhas.</button>
+        </div>
+
+        <div class="passo" id="passo-9">
+            <p>Clara participa do evento com Ana, mas percebe que o palco e a amizade não precisam ser opostos. Ela começa a equilibrar sua carreira com momentos de amizade, encontrando um caminho de harmonia.</p>
+            <button class="btn-proximo" data-proximo="10">Clara brilha no palco, com Ana ao seu lado, celebrando sua amizade e sucesso.</button>
+        </div>
+
+        <div class="passo" id="passo-10">
+            <p>Clara finalmente se apresenta no palco, com grande sucesso. Sua dedicação à dança a leva a conquistar novos objetivos, e ela reflete sobre como a vida é feita de escolhas, mas que o equilíbrio entre sonhos e amizades pode ser a chave para a felicidade.</p>
+            <button class="btn-proximo" data-proximo="11">Clara, agora mais madura, segue para novos desafios e aventuras no mundo da dança.</button>
+        </div>
+
+        <div class="passo" id="passo-11">
+            <img src="img/cenario-passo11-espaco-dancante.png" alt="Clara no palco com grande sucesso e reconhecimento">
+            <p>Clara alcança grandes feitos na dança e começa a ser reconhecida no mundo artístico. Ela sente que está no caminho certo, mas agora com mais equilíbrio em sua vida.</p>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
-</html>
+                                                                                                                                                                                                </html>
+                                                                                                                                                                                                
