@@ -1,39 +1,65 @@
-document.addEventListener("DOMContentLoaded", function() {
+body {
 
-    const buttons = document.querySelectorAll('.btn-proximo'); // Seleciona todos os botões
+    background-color: #1D4221;
 
-    const passos = document.querySelectorAll('.passo'); // Seleciona todas as etapas (passos)
+    color: white;
 
+    font-family: "Bai Jamjuree", sans-serif;
 
+    display: flex;
 
-    buttons.forEach(button => {
+    justify-content: center;
 
-        button.addEventListener('click', function() {
+    align-items: center;
 
-            const nextStepId = this.getAttribute('data-proximo'); // Pega o próximo passo do botão clicado
+    height: 700px;
 
-            const currentStep = document.querySelector('.passo.ativo'); // Encontra o passo atual
+    margin: 0;
 
-
-
-            if (currentStep) {
-
-                currentStep.classList.remove('ativo'); // Remove a classe 'ativo' do passo atual
-
-            }
+}
 
 
 
-            const nextStep = document.getElementById('passo-' + nextStepId); // Encontra o próximo passo
+button {
 
-            if (nextStep) {
+    background-color: #64A712;
 
-                nextStep.classList.add('ativo'); // Adiciona a classe 'ativo' no próximo passo
+    color: white;
 
-            }
+    font-family: "Bai Jamjuree", sans-serif;
 
-        });
+}
 
-    });
 
-});
+
+.passo {
+
+    display: none;
+
+}
+
+
+
+.passo.ativo {
+
+    display:block;
+
+}
+
+
+
+main {
+
+    text-align: center;
+
+    max-width: 90%;
+
+}
+
+
+
+img {
+
+    max-width: 90%;
+
+}
