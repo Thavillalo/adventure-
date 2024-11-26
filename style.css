@@ -1,51 +1,39 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
+document.addEventListener("DOMContentLoaded", function() {
 
-#historia {
-    text-align: center;
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    const buttons = document.querySelectorAll('.btn-proximo'); // Seleciona todos os botões
 
-h1 {
-    font-size: 24px;
-    color: #333;
-}
+    const passos = document.querySelectorAll('.passo'); // Seleciona todas as etapas (passos)
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
 
-button:hover {
-    background-color: #45a049;
-}
 
-#opcoes button {
-    margin: 10px;
-}
+    buttons.forEach(button => {
 
-#imagem-cenario {
-    margin: 20px 0;
-}
+        button.addEventListener('click', function() {
 
-#imagem-historia {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-}
+            const nextStepId = this.getAttribute('data-proximo'); // Pega o próximo passo do botão clicado
+
+            const currentStep = document.querySelector('.passo.ativo'); // Encontra o passo atual
+
+
+
+            if (currentStep) {
+
+                currentStep.classList.remove('ativo'); // Remove a classe 'ativo' do passo atual
+
+            }
+
+
+
+            const nextStep = document.getElementById('passo-' + nextStepId); // Encontra o próximo passo
+
+            if (nextStep) {
+
+                nextStep.classList.add('ativo'); // Adiciona a classe 'ativo' no próximo passo
+
+            }
+
+        });
+
+    });
+
+});
